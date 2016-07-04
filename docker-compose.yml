@@ -8,11 +8,11 @@ web:
   volumes:
     - ./app:/app
 db:
-  image: mysql
+  image: orchardup/postgresql
   ports:
-    - "3306:3306"
+    - "5433:5432"
   environment:
-    MYSQL_ROOT_PASSWORD: 123456
-    MYSQL_USER: dev
-    MYSQL_PASSWORD: 123456
-    MYSQL_DATABASE: myapp
+   LC_ALL: C.UTF-8
+   POSTGRESQL_USER: userapp
+   POSTGRESQL_DB: myapp
+   POSTGRESQL_PASS: 123456
